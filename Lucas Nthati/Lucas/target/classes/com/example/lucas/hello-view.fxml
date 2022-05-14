@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.media.MediaView?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lucas.HelloController">
+   <center>
+      <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
+         <children>
+            <MediaView fx:id="mediaView" fitHeight="250.0" fitWidth="500.0" />
+            <Slider fx:id="sliderVideo" style="-fx-background-color: #ffcf4b;">
+               <StackPane.margin>
+                  <Insets top="323.0" />
+               </StackPane.margin>
+            </Slider>
+         </children>
+      </StackPane>
+   </center>
+   <bottom>
+      <HBox prefHeight="46.0" prefWidth="278.0" style="-fx-background-color: orange;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="pause" mnemonicParsing="false" onMouseClicked="#pauseVideo" style="-fx-background-color: grey;" text="PAUSE" textAlignment="CENTER" textFill="#ffcf4b">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="4.0" right="2.0" top="14.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="back" mnemonicParsing="false" onMouseClicked="#backwardVideo" style="-fx-background-color: grey;" text="&lt;&lt;" textFill="#ffcf4b">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="4.0" right="2.0" top="14.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="play" mnemonicParsing="false" onMouseClicked="#playVideo" style="-fx-background-color: grey;" text="PLAY" textFill="#ffcf4b">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="4.0" right="2.0" top="14.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="forward" mnemonicParsing="false" onMouseClicked="#forwardVideo" style="-fx-background-color: grey;" text="&gt;&gt;" textFill="#ffcf4b">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="4.0" right="2.0" top="14.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="stop" mnemonicParsing="false" onMouseClicked="#stopVideo" style="-fx-background-color: grey;" text="STOP" textFill="#ffcf4b">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="4.0" right="2.0" top="14.0" />
+               </HBox.margin>
+            </Button>
+            <ImageView fitHeight="34.0" fitWidth="34.0">
+               <image>
+                  <Image url="@volume.jpg" />
+               </image>
+               <HBox.margin>
+                  <Insets top="9.0" />
+               </HBox.margin>
+            </ImageView>
+            <Slider fx:id="sliderVolume" opacity="0.64" prefHeight="14.0" prefWidth="298.0" style="-fx-background-color: black;">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="4.0" right="2.0" top="14.0" />
+               </HBox.margin>
+            </Slider>
+         </children>
+      </HBox>
+   </bottom>
+</BorderPane>
